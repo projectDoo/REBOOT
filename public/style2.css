@@ -1,0 +1,75 @@
+@import url(https://fonts.googleapis.com/css?family=Nunito:400,700,300);
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Nunito', sans-serif;
+  background-image: linear-gradient( #acb6e5, #86A8E7, #91eae4);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.input {
+  position: relative;
+  font-size: 1.5em;
+  background: linear-gradient(21deg, #10abff, #1beabd);
+  padding: 1px;
+  display: inline-block;
+  border-radius: 999em;
+}
+.input *:not(span) {
+    position: relative;
+    display: inherit;
+    border-radius: inherit;
+    margin: 14px;
+    border: none;
+    outline: none;
+    z-index: unset;
+}
+.input *:not(span):focus + span {
+  opacity: 1;
+  transform: scale(1);
+}
+.input span {
+  transform: scale(0.993, 0.94);
+  transition: transform 0.5s, opacity 0.25s;
+  opacity: 0;
+  position: absolute;
+  z-index: 0;
+  margin: 1px;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  box-shadow: inset 0 0 0 3px #fff, 0 0 0 4px #fff, 3px -3px 30px #1beabd, -3px 3px 30px #10abff;
+}
+
+html, body {
+  height: 100%;
+}
+
+input {
+  font-family: inherit;
+  line-height: inherit;
+  color: #2e3750;
+  min-width: 20em;
+  min-height: 3em;
+  font-size: 29px;
+  text-align: center;
+}
+
+
+html::after {
+  content: '';
+  background: linear-gradient(21deg, #10abff, #1beabd);
+  height: 3px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}

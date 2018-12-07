@@ -1,0 +1,194 @@
+@import url(https://fonts.googleapis.com/css?family=Nunito:400,700,300);
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  background-image: linear-gradient( #acb6e5, #86A8E7, #91eae4);
+}
+.page {
+  margin: 0 auto;
+  width: 920px;
+  font-size: 0;
+}
+.content {
+  width: 25%;
+  display: inline-block;
+  margin: 0 auto;
+  position: relative;
+  height: 100vh;
+  max-width: 300px;
+}
+
+ .circle_inner__layer img {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  cursor: pointer;  
+}
+
+ .circle {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 50%;
+  width: 200px;
+  transform: translateY(-50%);
+  transition: all 0.5s;
+
+}
+ 
+.circle:hover h2 {
+  opacity: 1;
+  top: -36px;
+}
+ .circle:hover .content_shadow {
+  transform: scale(1.1);
+  top: -22px;
+}
+.circle:hover h2 {
+  transition: all 0.2s 0.04s;
+}
+
+
+ .circle_title {
+  text-align: center;
+}
+ .circle_title h2 {
+  opacity: 0;
+  color: #4a7479;
+  margin: 0;
+  transition: all 0.2s 0.04s;
+  position: relative;
+  top: -10px;
+}
+ .circle_title h2 {
+  transition: all 0.2s;
+  color: black;
+  font-size: 30px;
+}
+ .circle_inner {
+  border-radius: 200px;
+  overflow: hidden;
+  margin: auto;
+  width: 200px;
+  z-index: 1;
+  transition: all 0.3s;
+  height: 200px;
+  position: relative;
+}
+
+ .circle_inner:hover {
+  transform: scale(1.1);
+
+} 
+ .content_shadow {
+  width: 200px;
+  box-shadow: 0px 31px 19px -2px #4389a2;
+  height: 20px;
+  border-radius: 70%;
+  position: relative;
+  top: -44px;
+  transition: all 0.3s;
+  z-index: 0;
+}
+
+.modal{
+  display:none;
+  position: fixed;
+  z-index: 1;
+  left:0; 
+  top:0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+
+}
+
+.modal_content{
+  background:linear-gradient(#83a4d4,#b6fbff);
+  margin:10% auto;
+  padding: 20px;
+  width: 70%;
+  height: 60%;
+  box-shadow: 0 5px 8px rgba(0,0,0,0.2),0 7px 20px rgba(0,0,0,0.2);
+  animation-name:modalopen;
+  animation-duration: 1s;
+  border-radius: 20px;
+  font-size: 80px;
+  text-align: center;
+
+} 
+
+.closeBtn{
+color: #ccc;
+float: right;
+font-size: 30px;
+
+
+}
+
+.closeBtn:hover,.closeBtn:focus{
+
+  color:#000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@keyframes modalopen{
+  from{opacity:0}
+  to{opacity:1}
+}
+
+
+.button_continue{
+    position: relative;
+    border: none;
+    padding: 20px 50px;
+    text-align: center;
+    text-decoration: none;
+    display:block;
+    margin: auto;
+    cursor: pointer;
+    font-size: 20px;
+    -webkit-appearance: none;
+    font-family: "Open Sans", Helvetica;
+    border-radius: 20px;
+    border-bottom: 1px solid rgba( 28, 227, 125, 0.5 );
+    background: rgba( 22, 230, 137, 1 );
+    color: #fff;
+    box-shadow: 0px 0px 0px rgba( 15, 165, 60, 0.1 );
+
+  -webkit-transform: translateZ(0);
+     -moz-transform: translateZ(0);
+      -ms-transform: translateZ(0);
+          transform: translateZ(0);
+  
+  -webkit-transition: all 0.2s ease;
+     -moz-transition: all 0.2s ease;
+      -ms-transition: all 0.2s ease;
+          transition: all 0.2s ease;
+}
+
+.button_continue:hover {
+  top: -10px;
+  box-shadow: 0px 10px 10px rgba( 15, 165, 60, 0.2 );
+  
+  -webkit-transform: rotateX(20deg);
+     -moz-transform: rotateX(20deg);
+      -ms-transform: rotateX(20deg);
+          transform: rotateX(20deg);
+}
+
+.button_continue:active {
+  top: 0px;
+  box-shadow: 0px 0px 0px rgba( 15, 165, 60, 0.0 );
+  background: rgba( 20, 224, 133, 1 );
+}
+
+.inner_text{
+  font-size: 50px;
+}

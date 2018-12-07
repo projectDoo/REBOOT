@@ -1,0 +1,64 @@
+<html>
+
+<head>
+    <title>REBOOT</title>
+    <script src="/socket.io/socket.io.js"></script>
+    <style>
+        body {
+            padding: 0;
+        }
+
+        canvas {
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <canvas id="main" onmousedown="mouseDown()" onmouseup="mouseUp()"></canvas>
+    <div id="simpleModal" class="modal">
+        <div class="modal_content">
+            <span class="closeBtn">&times;</span>
+            <h6>Game Over</h6>
+            <button class="button_continue" id="but1" onclick="continue_()"> View Scores </button>
+
+        </div>
+    </div>
+    <script>
+        const modal = document.getElementById('simpleModal');
+        const but = document.getElementById("but1");
+        const closeBtn = document.getElementsByClassName('closeBtn')[0];
+        const page = document.getElementsByClassName('page')[0];
+        closeBtn.addEventListener('click', closeModal);
+        window.addEventListener('click', clickOutside);
+
+        but.onclick = function(){
+            location.href = "scores";
+        }
+        function openModal() {
+            modal.style.display = "block";
+        }
+
+        function closeModal() {
+            modal.style.display = "none";
+        }
+
+        function clickOutside(e) {
+
+            if (e.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+    <script src="scripts/config.js"></script>
+    <script src="scripts/function.js"></script>
+    <script src="scripts/class.parent.js"></script>
+    <script src="scripts/class.player.js"></script>
+    <script src="scripts/class.enemy.js"></script>
+    <script src="scripts/class.food.js"></script>
+    <script src="scripts/script.js"></script>
+</body>
+
+</html>

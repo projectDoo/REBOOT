@@ -1,0 +1,27 @@
+{
+  "name": "dooproject",
+  "version": "1.0.0",
+  "description": "a cool project for cs110 course",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lilithkarapetyan/Doo.git"
+  },
+  "author": "doo team",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lilithkarapetyan/Doo/issues"
+  },
+  "dependencies": {
+    "express": "^4.16.2",
+    "socket.io": "^2.1.0"
+  },
+  "engines": {
+    "node": "4.7.2"
+  },
+  "homepage": "https://github.com/lilithkarapetyan/Doo#readme"
+}

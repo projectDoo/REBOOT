@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>REBOOT</title>
+	<link rel="stylesheet" type="text/css" href="style2.css">
+	<script src="/socket.io/socket.io.js"></script>
+</head>
+
+<body>
+
+	<p>
+		<span class="input">
+			<input id="name" type="text" placeholder="Enter Your Name">
+			<span></span>
+		</span>
+	</p>
+	<script>
+		const socket = io.connect('http://localhost:3000');
+		document.addEventListener("keydown", function (evt) {
+			if (event.keyCode === 13) {
+				socket.emit("player name", document.getElementById("name").value);
+				location.href = "play";
+			}
+		}, false);
+	</script>
+</body>
+
+</html>

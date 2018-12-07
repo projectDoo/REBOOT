@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>REBOOT</title>
+  <script src="/socket.io/socket.io.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <div class="page">
+
+    <div class="content">
+      <div class="circle">
+        <div class="circle_title">
+          <h2>Lilit</h2>
+        </div>
+        <div class="circle_inner">
+          <div class="circle_inner__layer">
+            <button onclick="openModal(event);">
+              <img data-id="0" src="images/Lilit.png" /> </button>
+          </div>
+        </div>
+        <div class="content_shadow"></div>
+      </div>
+      <div id="simpleModal" class="modal">
+        <div class="modal_content">
+          <span class="closeBtn" data-id="0">&times;</span>
+          <h2 class="inner_text">Name: Lilit</h2>
+          <h2 class="inner_text">Age: 17</h2>
+          <h2 class="inner_text">Interested in: Programming</h2>
+          <h2 class="inner_text">Dream: Work in Google</h2>
+          <button class="button_continue" id="but1" onclick="continue_()"> Continue </button>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="content">
+      <div class="circle">
+        <div class="circle_title">
+          <h2>Alice</h2>
+        </div>
+        <div class="circle_inner">
+          <div class="circle_inner__layer">
+            <button onclick="openModal(event)">
+              <img data-id="1" src="images/Alice.png" /> </button>
+          </div>
+        </div>
+        <div class="content_shadow"></div>
+      </div>
+      <div id="simpleModal" class="modal">
+        <div class="modal_content">
+          <span class="closeBtn" data-id="1">&times;</span>
+          <h1 class="inner_text">Alice</h1>
+          <button class="button_continue" id="but2" onclick="continue_()"> Continue </button>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="content">
+      <div class="circle">
+        <div class="circle_title">
+          <h2>Surencho</h2>
+        </div>
+        <div class="circle_inner">
+          <div class="circle_inner__layer">
+            <button onclick="openModal(event)">
+              <img data-id="2" src="images/Suren.png" /> </button>
+          </div>
+        </div>
+        <div class="content_shadow"></div>
+      </div>
+      <div id="simpleModal" class="modal">
+        <div class="modal_content">
+          <span class="closeBtn" data-id="2">&times;</span>
+          <h1 class="inner_text">Suren</h1>
+          <button class="button_continue" id="but3" onclick="continue_()"> Continue </button>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="content">
+      <div class="circle">
+        <div class="circle_title">
+          <h2>Haykuhi</h2>
+        </div>
+        <div class="circle_inner">
+          <div class="circle_inner__layer">
+            <button onclick="openModal(event)">
+              <img data-id="3" src="images/Haykuhi.png" /> </button>
+          </div>
+        </div>
+        <div class="content_shadow"></div>
+      </div>
+    </div>
+    <div id="simpleModal" class="modal">
+      <div class="modal_content">
+        <span class="closeBtn" data-id="3">&times;</span>
+        <h1 class="inner_text">Haykuhi</h1>
+        <button class="button_continue" id="but4" onclick="continue_()"> Continue </button>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="scripts/popup.js"></script>
+</body>
+
+</html>
