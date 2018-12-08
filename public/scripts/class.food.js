@@ -9,6 +9,7 @@ class Food extends Parent {
                 foodArr.splice(foodArr.indexOf(this), 1);
                 player.energy = player.energy < 90? player.energy + 10 : 100;   
                 player.score += 200;   
+                audio.play();
                 setTimeout(function(){
                 foodArr.push(new Food(rand(cnv.width - foodWidth), rand(cnv.height - toolBarHeight - foodHeight) + toolBarHeight, foodWidth, foodHeight, foodImage));
                 }, 2000);

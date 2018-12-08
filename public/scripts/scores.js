@@ -17,12 +17,14 @@ socket.on("results", function (data) {
         scoreArr.push(res[i].score);
     }
     scale = cnv.height/Math.max(...scoreArr);
+    scoreArr.sort();
     for (let i = 0; i < res.length; i++) {
         ctx.fillStyle = "rgb(" + (rand(200) + 50) + ", " + (rand(200) + 50) + ", " + (rand(200) + 50) + ")"
         ctx.fillRect(i * cnv.width / res.length, cnv.height - scale*res[i].score, cnv.width / res.length, scale*res[i].score);
         ctx.fillStyle = "rgb(0,0,0)";
         ctx.font = "20px Arial";
         ctx.fillText(res[i].name, i * cnv.width / res.length + (cnv.width / res.length)/3 , cnv.height - 100 - (scale*res[i].score)/2);
+        ctx.fillText(res[i].score, i * cnv.width / res.length + (cnv.width / res.length)/3 , cnv.height - 100 - (scale*res[i].score)/2 + 30);
     }
 });
 

@@ -18,6 +18,13 @@
 
 <body>
     <canvas id="main" onmousedown="mouseDown()" onmouseup="mouseUp()"></canvas>
+
+    <audio id="myAudio">
+        <source src="images/s1.wav" type="audio/wav">
+    </audio>
+    <audio id="endGameAudio">
+        <source src="images/s2.ogg" type="audio/ogg">
+    </audio>
     <div id="simpleModal" class="modal">
         <div class="modal_content">
             <span class="closeBtn">&times;</span>
@@ -34,7 +41,7 @@
         closeBtn.addEventListener('click', closeModal);
         window.addEventListener('click', clickOutside);
 
-        but.onclick = function(){
+        but.onclick = function () {
             location.href = "scores";
         }
         function openModal() {

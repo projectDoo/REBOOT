@@ -6,8 +6,7 @@ class Player extends Parent {
         this.name = name;
         this.score = 0;
         this.dead = false;
-        this.score = 0;
-        this.energy = 101;
+        this.energy = 100;
     }
 
     update() {
@@ -39,7 +38,7 @@ class Player extends Parent {
                 obj.x + obj.width / 2, obj.y + obj.height / 2)
             if (distance < this.width / 2 + obj.width / 2) {
                 this.dead = true;
-
+                endAudio.play();
             }
         }
     }

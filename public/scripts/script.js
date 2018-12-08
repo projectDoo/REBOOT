@@ -2,6 +2,7 @@
 const loop = function () {
     
         draw();
+        if(gameStarted)
         update();
         if(!player.dead){
             requestAnimationFrame(loop);

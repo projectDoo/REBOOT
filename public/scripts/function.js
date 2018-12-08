@@ -44,7 +44,7 @@ const draw = function () {
     ctx.fillStyle = "white";
     ctx.fillRect(2 * cnv.width / 5 - 10, toolBarHeight / 3 - 20, Math.floor(player.energy) * 2, 30);
     ctx.fillStyle = "black";
-    ctx.fillText("Energy: " + Math.floor(player.energy), 2 * cnv.width / 5, toolBarHeight / 3);
+    ctx.fillText("Energy: " + Math.ceil(player.energy), 2 * cnv.width / 5, toolBarHeight / 3);
     ctx.fillText("Score: " + player.score, 3 * cnv.width / 5, toolBarHeight / 3);
     player.draw();
     for (let i = 0; i < enemyArr.length; i++) {

@@ -2,12 +2,14 @@
 var socket = io.connect('http://localhost:3000');
 var player;
 let gameStyle;
+const audio = document.getElementById("myAudio"); 
+const endAudio = document.getElementById("endGameAudio"); 
 const playerImage = new Image();
 playerImage.src = "images/Lilit_.png";
 const enemyImage = new Image();
 const enemyImageF = new Image();
-enemyImage.src = "images/Lilit_enemy.png"; 
-enemyImageF.src = "images/FLilit_enemy.png"; 
+enemyImage.src = "images/Suren_enemy.png"; 
+enemyImageF.src = "images/FSuren_enemy.png"; 
 const foodImage = new Image();
 foodImage.src = "images/Lilit_food1.png"; 
 const backgroundImage = new Image();

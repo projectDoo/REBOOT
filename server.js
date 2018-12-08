@@ -50,7 +50,6 @@ io.on('connection', function (socket) {
         else if(data == 4){
             gameData.style = "Haykuhi";
         }
-        console.log(data.style)
         socket.emit("img", data.style)
     });
 
